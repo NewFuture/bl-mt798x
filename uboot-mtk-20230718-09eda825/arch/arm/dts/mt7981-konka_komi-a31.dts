@@ -38,9 +38,11 @@
 	};
 
 	aliases {
+	    red = &led_red;
+	    green = &led_green;
 	    led-boot = &led_boot;
-	    led-failsafe = &led_failsafe;
-	    led-running = &led_running;
+	    led-failsafe = &led_red;
+	    led-running = &led_green;
 	    led-upgrade = &led_boot;
 	};
 
@@ -51,11 +53,11 @@
 			label = "blue:system";
 			gpios = <&gpio 13 GPIO_ACTIVE_LOW>;
 		};
-		led_running: led@1 {
+		led_green: led@1 {
 			label = "ap250md:green";
 			gpios = <&gpio 8 GPIO_ACTIVE_LOW>;
 		};
-		led_failsafe:led@2 {
+		led_red:led@2 {
 			label = "ap250md:red";
 			gpios = <&gpio 34 GPIO_ACTIVE_LOW>;
 		};
