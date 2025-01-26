@@ -7,7 +7,7 @@
 / {
 	#address-cells = <1>;
 	#size-cells = <1>;
-	model = "mt7981-komi-a31-etr631t-etr635u";
+	model = "mt7981-konka_komi-a31";
 	compatible = "mediatek,mt7981", "mediatek,mt7981-rfb";
 
 	chosen {
