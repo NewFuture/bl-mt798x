@@ -17,8 +17,8 @@
 
 	config {
 		bootcmd = "mtkboardboot";
-		blink_led = "red:system";
-		system_led = "blue:system";
+		blink_led = "blue:system";
+		system_led = "ap250md:green";
 	};
 
 	gpio-keys {
@@ -47,43 +47,15 @@
 	leds {
 		compatible = "gpio-leds";
 
-		led@0 {
-			label = "green:system";
-			gpios = <&gpio 8 GPIO_ACTIVE_LOW>;
-		};
-
-		led@1 {
+		led_boot: led@0 {
 			label = "blue:system";
 			gpios = <&gpio 13 GPIO_ACTIVE_LOW>;
-			default-state = "on";
 		};
-
-		led@2 {
-			label = "red:system";
-			gpios = <&gpio 34 GPIO_ACTIVE_LOW>;
-		};
-
-		led_running:led@3 {
-			label = "green";
-			gpios = <&gpio 8 GPIO_ACTIVE_LOW>;
-		};
-
-		led_failsafe:led@4 {
-			label = "red";
-			gpios = <&gpio 34 GPIO_ACTIVE_LOW>;
-		};
-
-		led_boot:led@5 {
-			label = "blue";
-			gpios = <&gpio 34 GPIO_ACTIVE_LOW>;
-		};
-
-		led@6 {
+		led_running: led@1 {
 			label = "ap250md:green";
 			gpios = <&gpio 8 GPIO_ACTIVE_LOW>;
 		};
-
-		led@7 {
+		led_failsafe:led@2 {
 			label = "ap250md:red";
 			gpios = <&gpio 34 GPIO_ACTIVE_LOW>;
 		};
