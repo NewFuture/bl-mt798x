@@ -41,7 +41,7 @@ jobs:
       - name: Get build dept.
         run: |
           sudo apt update
-          sudo apt install gcc-aarch64-linux-gnu build-essential flex bison libssl-dev
+          sudo apt install gcc-aarch64-linux-gnu build-essential flex bison libssl-dev device-tree-compiler qemu-user-static
       - name: Build it
         run: |
           ./build.sh
